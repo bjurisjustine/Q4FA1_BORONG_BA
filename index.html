@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sign-up Sheet</title>
+    
+</head>
+<body>
+    <form id="fillupForm">
+    <fieldset>
+        <legend>Sign-up Form</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" 
+        onblur="chValue()" required onfocus="toValid(this)" >
+       
+        <br> </br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" 
+        onblur="chValue()" required onfocus="toValid(this)" >
+       
+        <br> </br>
+       
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" 
+         onblur="chValue()" required onfocus="toValid(this)" >
+        
+        <br> </br>
+       
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+         onblur="chValue()" required onfocus="toValid(this)">
+        
+        <br> </br>
+        
+        <label for="interests">Interests:</label>
+        <textarea cols="50" rows="4" id="interests" name="interests" 
+        onblur="inpInterests()" required onfocus="toValid(this)"></textarea>
+        <p id="error" class="errorInput"></p>  <br>
+    
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value=" ">Select Value...</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Prefer-Not-To-Mention">Prefer not to mention</option>
+        </select>
+        
+        <br> </br>
+        <button type="submit" value="Submit" onclick="finalOutput()">Submit</button>
+        <button type="reset" value="Reset" onclick="resOutp()">Reset</button>
+      </fieldset>
+      <fieldset>
+        <legend> Personal Information</legend>
+            <div id="printout"></div>
+                <div class="output" id="nameoutput"> Name: </div>
+                <div class="output" id="unameoutput">Userame: </div>
+                <div class="output" id="passwordoutput"> Password: </div>
+                <div class="output" id="emailoutput"> Email: </div>
+                <div class="output" id="interestsoutput"> Interests: </div>
+                <div class="output" id="genderoutput"> Gender: </div>
+            </div>
+      </fieldset>
+      </form>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="style.css">
+
+</body>
+</html>
